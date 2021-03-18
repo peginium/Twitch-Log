@@ -3,7 +3,7 @@ var fs = require('fs');
 
 const client = new tmi.Client({
 	connection: { reconnect: true },
-	channels: [ 'videoyun','peginium' ]
+	channels: [ 'channel1','channel2' ]
 });
 
 client.connect();
