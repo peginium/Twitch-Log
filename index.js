@@ -16,5 +16,5 @@ client.on('message', (channel, tags, message, self) => {
 	//Better Channel Name
 	var channelName = channel.replace("#","")
   	//log.txt
-  	fs.appendFileSync(`elver-log.txt`, `[${channelName}] - [${date}] ${tags.username}: ${message}\n`);
+  	fs.appendFileSync(`chat-log.txt`, `[${channelName}] - [${date}] ${tags.username}: ${message}\n`);
 });
