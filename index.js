@@ -3,18 +3,18 @@ var fs = require('fs');
 
 const client = new tmi.Client({
 	connection: { reconnect: true },
-	channels: [ 'channel1','channel2' ]
+	channels: [ 'videoyun','peginium' ]
 });
 
 client.connect();
 
 client.on('message', (channel, tags, message, self) => {
-	// console.log,
-	console.log(`${tags.username}: ${message}`);
 	//Time
 	var date = new Date().toLocaleTimeString();
 	//Better Channel Name
 	var channelName = channel.replace("#","")
+	// console.log,
+	console.log(`[${channelName}] - [${date}] ${tags.username}: ${message}`);
   	//log.txt
   	fs.appendFileSync(`elver-log.txt`, `[${channelName}] - [${date}] ${tags.username}: ${message}\n`);
 });
