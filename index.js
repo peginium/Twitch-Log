@@ -16,5 +16,5 @@ client.on('message', (channel, tags, message, self) => {
 	// console.log,
 	console.log(`[${channelName}] - [${date}] ${tags.username}: ${message}`);
   	//log.txt
-  	fs.appendFileSync(`elver-log.txt`, `[${channelName}] - [${date}] ${tags.username}: ${message}\n`);
+  	fs.appendFileSync(`chat-log.txt`, `[${channelName}] - [${date}] ${tags.username}: ${message}\n`);
 });
